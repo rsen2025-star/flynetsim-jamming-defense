@@ -26,10 +26,10 @@ for exactly which files are new, modified, or reused.
 ns3/scratch/flynetsim/   ns-3 program: uav-net-sim.cc, myApps.*, wscript, config.example.xml
 ns3/patches/             mac-low-hop-assert.patch (applied by setup.sh)
 bridge/                  mavlink_zmq_bridge.py
-scripts/                 setup.sh, master_parser.py, make_figures.py
+scripts/                 setup.sh, master_parser.py
 env/                     Dockerfile, requirements.txt
 data/                    per-run CSV results (see data/README.md)
-figures/                 paper figures + System.pdf
+figures/                 System.pdf (architecture diagram)
 ```
 
 ## Requirements
@@ -116,11 +116,6 @@ python3 /path/to/repo/scripts/master_parser.py
 It writes `<name>.csv` with per-flow loss, mean delay, and jitter; telemetry is the
 `DRONE`-flagged row. Repeat per rate and threshold. The CSVs behind the paper's tables are
 in [`data/`](data/README.md).
-
-## Regenerating figures
-
-`scripts/make_figures.py` regenerates the throughput figures from the run outputs. See its
-header for the required input (currently a placeholder — see `data/README.md`).
 
 ## Citation and license
 

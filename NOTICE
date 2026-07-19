@@ -36,8 +36,7 @@ New in this work (original contributions, (C) the authors):
     (CheckJamming / DoChannelHop / ReadThreshold), the TCP stream reassembly,
     and the per-lane packet scheduling
   - ns3/patches/mac-low-hop-assert.patch  hop-assertion clamp for ns-3.27
-  - scripts/ (setup.sh, master_parser.py, make_figures.py) and env/ (Dockerfile,
-    requirements.txt)
+  - scripts/ (setup.sh, master_parser.py) and env/ (Dockerfile, requirements.txt)
 
 Reused from FlyNetSim, modified (shipped here with attribution headers, GPLv2):
   - ns3/scratch/flynetsim/uav-net-sim.cc  (heavily modified: defense + reassembly added)
