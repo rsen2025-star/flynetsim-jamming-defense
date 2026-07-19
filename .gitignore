@@ -1,0 +1,27 @@
+# --- Fetched / built at setup time (never commit) ---
+ns-allinone-3.27/
+ns-allinone-3.27.tar.bz2
+_flynetsim_upstream/
+build/
+*.o
+*.pyc
+__pycache__/
+
+# --- Large / regenerable artifacts ---
+*.pcap
+flynetsim-results.xml
+uav-flight*.pcap
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Backups ---
+*.backup
+*_backup
+*.phase2_backup
+*.working_backup
+*.orig
+*_original

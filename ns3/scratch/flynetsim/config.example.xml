@@ -1,0 +1,29 @@
+<!--
+  config.example.xml — one experimental point for the FlyNetSim jamming/defense testbed.
+  Copy to config.xml (the ns-3 binary reads ./config.xml at startup).
+
+  Fields:
+    <instance>  simulation instance id (leave 1)
+    <network>   0 = Wi-Fi (used in the paper), 1 = LTE
+    <traffic>
+      <count>     number of jammer / contending stations. Paper uses 5.
+      <rate>      per-jammer offered load in Mbps. Sweep: 0.0, 0.5, 1.0, 5.0, 10.0
+      <size>      jammer packet size in bytes. Paper uses 800.
+      <threshold> application-layer loss % that triggers the channel hop.
+                    30  = defense ON  (hop to channel 6 when window loss > 30%)
+                    101 = defense OFF (unreachable %, hop never fires — the "no defense" runs)
+    <vehicle>   UAV start position in metres (x, y, z). Paper: (1, 1, 10).
+-->
+<simulator>
+  <instance>1</instance>
+  <network>0</network>
+  <traffic>
+    <count>5</count>
+    <rate>1.0</rate>
+    <size>800</size>
+    <threshold>30</threshold>
+  </traffic>
+  <vehicle>
+    <uav name="0"><x>1</x><y>1</y><z>10</z></uav>
+  </vehicle>
+</simulator>

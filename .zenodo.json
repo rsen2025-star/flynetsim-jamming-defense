@@ -1,0 +1,22 @@
+{
+  "title": "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense",
+  "description": "Artifact for the IEEE CCNC 2027 paper: a containerized ns-3 + ArduPilot co-simulation testbed for a single UAV, with a re-purposed Wi-Fi jammer and a reactive channel-hopping defense. Extends FlyNetSim (Baidya et al., ACM MSWiM 2018).",
+  "license": "GPL-2.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "keywords": [
+    "UAV networks",
+    "co-simulation testbed",
+    "Wi-Fi jamming",
+    "channel hopping",
+    "reproducibility",
+    "ns-3",
+    "ArduPilot"
+  ],
+  "creators": [
+    {
+      "name": "Sen, Rajarshi",
+      "affiliation": "Florida Institute of Technology"
+    }
+  ]
+}

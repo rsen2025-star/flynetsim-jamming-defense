@@ -1,0 +1,4 @@
+def build(bld):
+    obj = bld.create_ns3_program('flynetsim', ['core', 'network', 'internet', 'mobility', 'wifi', 'aodv', 'applications'])
+    obj.source = ['uav-net-sim.cc', 'myApps.cc', 'myInput.cc']
+    obj.env.append_value('LIB', ['czmq', 'zmq'])

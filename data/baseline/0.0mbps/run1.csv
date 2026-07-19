@@ -1,0 +1,5 @@
+Flow ID,Source IP,Dest IP,Protocol,Tx Packets,Rx Packets,Lost Packets,Loss (%),Mean Delay (ms),Mean Jitter (ms),Total Tx Bytes,Note
+1,10.10.1.2,10.10.1.1,TCP,33413,33412,1,0.0,0.14,0.14,4324728,DRONE
+2,10.10.1.1,10.10.1.2,TCP,824,824,0,0.0,0.27,0.21,87588,DRONE
+3,10.10.1.2,10.10.1.1,TCP,584,584,0,0.0,0.25,0.26,30372,DRONE
+4,10.10.1.1,10.10.1.2,TCP,16719,16719,0,0.0,0.25,0.16,869392,DRONE

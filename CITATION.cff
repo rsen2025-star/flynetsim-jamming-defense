@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this testbed, please cite the paper below."
+title: "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
+authors:
+  - family-names: Sen
+    given-names: Rajarshi
+    affiliation: "Florida Institute of Technology"
+    email: rsen2025@my.fit.edu
+  # TODO: add co-authors to match the paper's author block
+license: GPL-2.0
+repository-code: "https://github.com/rsen2025-star/flynetsim-jamming-defense"
+keywords:
+  - UAV networks
+  - co-simulation testbed
+  - Wi-Fi jamming
+  - channel hopping
+  - reproducibility
+  - ns-3
+  - ArduPilot
+preferred-citation:
+  type: conference-paper
+  title: "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
+  authors:
+    - family-names: Sen
+      given-names: Rajarshi
+  collection-title: "IEEE Consumer Communications & Networking Conference (CCNC)"
+  year: 2027
+  # TODO: add DOI once the paper is published
+references:
+  - type: software
+    title: "FlyNetSim: An Open Source Synchronized UAV Network Simulator based on ns-3 and Ardupilot"
+    authors:
+      - family-names: Baidya
+        given-names: Sabur
+      - family-names: Shaikh
+        given-names: Zoheb
+      - family-names: Levorato
+        given-names: Marco
+    year: 2018
+    repository-code: "https://github.com/saburhb/FlyNetSim"

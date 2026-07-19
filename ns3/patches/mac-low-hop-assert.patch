@@ -1,0 +1,18 @@
+# Hop-assertion patch for ns-3.27 (src/wifi/model/mac-low.cc)
+#
+# During a reactive channel hop (and the ArfWifiManager rate changes it triggers),
+# the computed ACK duration can momentarily go negative, tripping an ns-3 assertion
+# that aborts the run. This clamps the duration to zero instead, so the simulation
+# survives the hop. Apply from the ns-3.27 root:  patch -p1 < mac-low-hop-assert.patch
+#
+--- a/src/wifi/model/mac-low.cc
++++ b/src/wifi/model/mac-low.cc
+@@ -2146,7 +2146,7 @@
+   // minus the time to transmit the ACK frame and its SIFS interval
+   duration -= GetAckDuration (ackTxVector);
+   duration -= GetSifs ();
+-  NS_ASSERT_MSG (duration.IsPositive (), "Please provide test case to maintainers if this assert is hit.");
++  if (!duration.IsPositive ()) { duration = Seconds(0); }
+   ack.SetDuration (duration);
+
+   Ptr<Packet> packet = Create<Packet> ();

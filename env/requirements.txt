@@ -1,0 +1,6 @@
+# Python deps for the MAVLink-ZMQ bridge and the plotting scripts.
+# Versions pinned to the working flynetsim-env container (Ubuntu 18.04, Python 3.6.9).
+pymavlink==2.4.49
+pyzmq==25.1.2
+numpy==1.19.5
+matplotlib==2.1.1
