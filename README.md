@@ -11,7 +11,7 @@ for exactly which files are new, modified, or reused.
 
 ## Architecture
 
-![architecture](figures/System.pdf)
+![architecture](figures/System.png)
 
 - **Flight plane:** ArduPilot SITL (Copter firmware) + QGroundControl on the host.
 - **Network plane:** ns-3.27, real-time mode, 802.11g. One AP, one UAV, five jammer
@@ -29,7 +29,7 @@ bridge/                  mavlink_zmq_bridge.py
 scripts/                 setup.sh, master_parser.py
 env/                     Dockerfile, requirements.txt
 data/                    per-run CSV results (see data/README.md)
-figures/                 System.pdf (architecture diagram)
+figures/                 System.png (display) + System.pdf (vector source)
 ```
 
 ## Requirements
