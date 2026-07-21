@@ -1,7 +1,7 @@
 # Data
 
 Per-run results from the ns-3 FlowMonitor, parsed to CSV by
-`scripts/master_parser.py` / `scripts/xml_to_csv.py`.
+`scripts/master_parser.py`.
 
 Layout:
 
