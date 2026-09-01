@@ -95,8 +95,6 @@ documented in [`config.example.xml`](ns3/scratch/flynetsim/config.example.xml):
 | `size` | jammer packet size in bytes | `800` |
 | `threshold` | loss % that triggers the channel hop | **`30` = defense ON** |
 
-The `threshold` field is how you switch between the paper's two conditions. `101` is
-unreachable, so the hop never fires — that gives you the "under attack, no defense" rows.
 
 ---
 
