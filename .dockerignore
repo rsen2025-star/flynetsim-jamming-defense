@@ -1,0 +1,34 @@
+# Docker does not read .gitignore — keep the build-artifact entries below in
+# sync with it. Without this file, `docker build` copies everything in the repo
+# root into the build context, including a local ns-3 tree if scripts/setup.sh
+# has already been run here (that alone is several GB).
+
+# --- Fetched / built by scripts/setup.sh ---
+ns-allinone-3.27/
+ns-allinone-3.27.tar.bz2
+_flynetsim_upstream/
+build/
+*.o
+*.pyc
+__pycache__/
+
+# --- Version control ---
+.git/
+.gitignore
+
+# --- Large / regenerable artifacts ---
+*.pcap
+flynetsim-results.xml
+uav-flight*.pcap
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- Backups ---
+*.backup
+*_backup
+*.orig
+*_original

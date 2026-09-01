@@ -1,5 +1,5 @@
 <!--
-  config.example.xml — one experimental point for the FlyNetSim jamming/defense testbed.
+  config.example.xml — one experimental point for ReCoST.
   Copy to config.xml (the ns-3 binary reads ./config.xml at startup).
 
   Fields:

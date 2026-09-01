@@ -1,11 +1,12 @@
-FlyNetSim Jamming / Channel-Hopping Defense Testbed
-===================================================
+ReCoST — UAV Wi-Fi Jamming / Channel-Hopping Defense Testbed
+===========================================================
 
 This repository accompanies the paper:
 
-  "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and
+  "ReCoST: A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and
    Channel-Hopping Defense", IEEE CCNC 2027 (Testbed Track).
-  Authors: Rajarshi Sen [+ co-authors: TODO], Florida Institute of Technology.
+  Authors: Rajarshi Sen, Abdullah Aydeger, and Siddhartha Bhattacharyya,
+  Florida Institute of Technology.
 
 It is licensed under the GNU General Public License v2 (see LICENSE), consistent
 with ns-3, on which the network simulation is built.
@@ -47,7 +48,9 @@ Reused from FlyNetSim, modified (shipped here with attribution headers, GPLv2):
 Reused from FlyNetSim, VERBATIM (NOT re-hosted here — fetched from the upstream
 repository by scripts/setup.sh at build time):
   - myInput.cc, myInput.h
-  - FlyNetSim's ns-3 patches (wscript.patch, packet-sink.h.patch)
+  - FlyNetSim's ns-3 wscript.patch
+    (FlyNetSim's packet-sink.h.patch is NOT applied — it retypes PacketSink's Rx
+     trace and is incompatible with our stock-signature RcvPacket; see scripts/setup.sh)
 
 Third-party components (fetched, not included):
   - ns-3.27          GNU GPL v2                 https://www.nsnam.org

@@ -1,12 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this testbed, please cite the paper below."
-title: "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
+title: "ReCoST: A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
 authors:
   - family-names: Sen
     given-names: Rajarshi
     affiliation: "Florida Institute of Technology"
     email: rsen2025@my.fit.edu
-  # TODO: add co-authors to match the paper's author block
+  - family-names: Aydeger
+    given-names: Abdullah
+    affiliation: "Florida Institute of Technology"
+    email: aaydeger@fit.edu
+  - family-names: Bhattacharyya
+    given-names: Siddhartha
+    affiliation: "Florida Institute of Technology"
+    email: sbhattacharyya@fit.edu
 license: GPL-2.0
 repository-code: "https://github.com/rsen2025-star/flynetsim-jamming-defense"
 keywords:
@@ -19,10 +26,14 @@ keywords:
   - ArduPilot
 preferred-citation:
   type: conference-paper
-  title: "A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
+  title: "ReCoST: A Reproducible Co-Simulation Testbed for UAV Wi-Fi Jamming and Channel-Hopping Defense"
   authors:
     - family-names: Sen
       given-names: Rajarshi
+    - family-names: Aydeger
+      given-names: Abdullah
+    - family-names: Bhattacharyya
+      given-names: Siddhartha
   collection-title: "IEEE Consumer Communications & Networking Conference (CCNC)"
   year: 2027
   # TODO: add DOI once the paper is published

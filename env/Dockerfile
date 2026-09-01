@@ -1,10 +1,12 @@
-# FlyNetSim jamming/defense testbed — ns-3 + bridge environment.
+# ReCoST — UAV Wi-Fi jamming / channel-hopping defense testbed.
+# ns-3 + bridge environment.
 #
-# Scope: this image builds the ns-3.27 network stack and the MAVLink-ZMQ bridge,
-# which together produce every measured result in the paper (ns-3 FlowMonitor).
-# ArduPilot SITL and QGroundControl are intentionally NOT in this image: they are
-# heavy, GUI-bound, and do not affect the reported loss/delay/jitter numbers.
-# Run ArduPilot separately (see README, "ArduPilot") pinned at Copter-4.0.0.
+# This image holds ns-3.27 and the MAVLink-ZMQ bridge — together they produce
+# every measured result in the paper (via ns-3 FlowMonitor).
+#
+# ArduPilot SITL and QGroundControl are deliberately left out: both are heavy and
+# GUI-bound, and neither affects the reported loss, delay, or jitter. Install
+# ArduPilot separately at Copter-4.0.0 — see the README.
 #
 # Distrobox can consume this same image:
 #   distrobox create --image flynetsim-env:latest --name flynetsim-env
@@ -27,15 +29,16 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       python3 python3-dev python3-pip python3-setuptools \
  && rm -rf /var/lib/apt/lists/*
 # NOTE: python (2.7) is required by ns-3.27's ./waf (its shebang is `env python`);
-# python3 runs the bridge and plotting scripts.
+# python3 runs the bridge and the results parser.
 
-# Bridge + plotting deps. pip 9 (bionic default) is too old for pyzmq 25, so bump it first.
+# Python deps. pip 9 (bionic default) is too old for pyzmq 25, so bump it first.
 COPY env/requirements.txt /tmp/requirements.txt
 RUN python3 -m pip install --upgrade "pip<21" \
  && python3 -m pip install --no-cache-dir -r /tmp/requirements.txt
 
-# Bring in the repo and build ns-3 (downloads ns-3.27, fetches FlyNetSim verbatim
-# files, applies patches, drops in scratch/flynetsim, runs ./waf).
+# Copy the repo in and build. setup.sh downloads ns-3.27, fetches the FlyNetSim
+# files we reuse, applies the patches, adds scratch/flynetsim, and runs ./waf.
+# (.dockerignore keeps .git and any local ns-3 tree out of the build context.)
 WORKDIR /opt/flynetsim
 COPY . /opt/flynetsim/
 RUN scripts/setup.sh
